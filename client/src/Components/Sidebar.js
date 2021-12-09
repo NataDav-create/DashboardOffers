@@ -1,10 +1,13 @@
 import React from 'react';
 import Links from './Links';
 import styled from 'styled-components';
+import { ImNewTab } from 'react-icons/im';
+import { MdWhatshot } from 'react-icons/md';
+import { FcExpired } from 'react-icons/fc';
 
 export const SidebarEl = styled.div`
   position: fixed;
-  width: 15rem;
+  width: 17rem;
   height: 100%;
   background-color: #f5a1c5;
 `;
@@ -21,16 +24,38 @@ export const Offers = styled.div`
 export const LinksEl = styled.div`
   ul {
     .active {
-      border-right: 0.3rem solid #010001;
+      border-right: 0.3rem solid #fff;
+      a {
+        color: #fff;
+      }
+    }
+    li {
+      border-right: 0.3rem solid transparent;
+      margin: 1rem 0;
+      list-style-type: none;
+      a {
+        margin: 0 3rem;
+        color: #010001;
+        font-size: 1.1rem;
+        display: flex;
+        gap: 1rem;
+      }
+      transition: 0.3 ease-in-out;
+      &:hover {
+        border-right-color: #fff;
+        a {
+          color: #fff;
+        }
+      }
     }
   }
 `;
 
 export default function Sidebar() {
   const links = [
-    { text: 'New Offers', icon: '', active: true },
-    { text: 'Hot Offers', icon: '' },
-    { text: 'Expired Offers', icon: '' },
+    { text: 'New Offers', icon: ImNewTab, active: true },
+    { text: 'Hot Offers', icon: MdWhatshot },
+    { text: 'Expired Offers', icon: FcExpired },
   ];
   return (
     <SidebarEl>

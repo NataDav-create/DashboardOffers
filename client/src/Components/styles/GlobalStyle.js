@@ -1,8 +1,6 @@
-import {
-  createGlobalStyle
-} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -14,7 +12,7 @@ html {
 body{
   margin: 0;
   padding: 0;
-  background-color: #010001;
+  background-color: #fff;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   color: white;
