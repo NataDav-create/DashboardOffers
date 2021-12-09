@@ -41,7 +41,7 @@ ul {
   padding: 0;
 }
 h1, h2, h3 {
-  font-family: Pacifico;
+  font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
 }

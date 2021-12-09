@@ -4,16 +4,19 @@ import styled from 'styled-components';
 import { ImNewTab } from 'react-icons/im';
 import { MdWhatshot } from 'react-icons/md';
 import { FcExpired } from 'react-icons/fc';
+import piggy from '../images/pi.png';
 
 export const SidebarEl = styled.div`
   position: fixed;
+  display: flex;
+  flex-direction: column;
   width: 17rem;
   height: 100%;
   background-color: #f5a1c5;
 `;
 
 export const Offers = styled.div`
-  color: #010001;
+  color: #fff;
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -23,10 +26,11 @@ export const Offers = styled.div`
 
 export const LinksEl = styled.div`
   ul {
+    margin-bottom: 80px;
     .active {
-      border-right: 0.3rem solid #fff;
+      border-right: 0.3rem solid #010001;
       a {
-        color: #fff;
+        color: #010001;
       }
     }
     li {
@@ -51,6 +55,17 @@ export const LinksEl = styled.div`
   }
 `;
 
+export const ImgContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 9rem;
+    object-fit: cover;
+  }
+`;
+
 export default function Sidebar() {
   const links = [
     { text: 'New Offers', icon: ImNewTab, active: true },
@@ -63,6 +78,9 @@ export default function Sidebar() {
       <LinksEl>
         <Links links={links} />
       </LinksEl>
+      <ImgContainer>
+        <img src={piggy} alt="piggy" />
+      </ImgContainer>
     </SidebarEl>
   );
 }
