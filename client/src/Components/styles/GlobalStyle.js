@@ -12,7 +12,7 @@ html {
 body{
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #010001;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   color: black;
