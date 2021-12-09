@@ -1,6 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+  createGlobalStyle
+} from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle `
 html {
   box-sizing: border-box;
 }
@@ -15,7 +17,7 @@ body{
   background-color: #010001;
   font-family: Roboto, sans-serif;
   font-size: 20px;
-  color: black;
+  color: white;
 }
 
 img {
