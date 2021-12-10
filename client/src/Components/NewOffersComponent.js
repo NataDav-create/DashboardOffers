@@ -23,14 +23,14 @@ export const NewOffersComponent = ({ offers }) => {
     <SectionCenter>
       <table cellPadding={0} cellSpacing={0}>
         <thead>
-          {offers[0] && columns.map((heading) => <th>{heading}</th>)}
+          <th>Offer</th>
+          <th>Created at</th>
         </thead>
         <tbody>
           {offers.map((row) => (
             <tr>
-              {columns.map((column) => (
-                <td>{row[column]}</td>
-              ))}
+              <td>{row.offername}</td>
+              <td>{row.createdat}</td>
             </tr>
           ))}
         </tbody>

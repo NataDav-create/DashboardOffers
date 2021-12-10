@@ -1,8 +1,6 @@
-import {
-  createGlobalStyle
-} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -76,6 +74,8 @@ p {
 }
 
 table {
+  width: 100%;
+  margin-left: 50px;
   color: black;
     border-spacing: 0;
     font-size: 12px;
