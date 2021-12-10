@@ -45,15 +45,15 @@ export default function OffersInfo() {
   const data = [
     {
       title: 'New Offers',
-      value: 70,
+      value: '70%',
     },
     {
       title: 'Hot Offers',
-      value: 40,
+      value: '40%',
     },
     {
       title: 'Expired Offers',
-      value: 60,
+      value: '60%',
     },
   ];
   return (
@@ -61,20 +61,20 @@ export default function OffersInfo() {
       <Title title="Offers Info" subtitle="Details about offers info" />
       <div className="analytics">
         <div className="progress__bars">
+          {' '}
           {data.map((x) => {
             console.log('x', x);
             return (
               <div className="progress__bar">
                 <div className="title-cont">
-                  <h5>{x.title}</h5>
-                  <h5>{x.value}</h5>
-                </div>
+                  <h5> {x.title} </h5> <h5> {x.value} </h5>{' '}
+                </div>{' '}
                 <progress value={x.value} max="100" />
               </div>
             );
-          })}
-        </div>
-      </div>
+          })}{' '}
+        </div>{' '}
+      </div>{' '}
     </OffersInfoEl>
   );
 }
