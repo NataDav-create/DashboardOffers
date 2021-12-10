@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 export default function Links({ links }) {
   return (
     <ul>
+      {' '}
       {links.map((link) => {
-        console.log(link);
         return (
           <li className={link.active ? 'active' : ''}>
             <Link to={link.url}>
-              <link.icon /> {link.text}
-            </Link>
+              <link.icon /> {link.text}{' '}
+            </Link>{' '}
           </li>
         );
-      })}
+      })}{' '}
     </ul>
   );
 }

@@ -15,8 +15,8 @@ function App() {
 
   const getOffers = async () => {
     const response = await fetch(url);
-    const offers = await response.json();
-    console.log(offers);
+    const data = await response.json();
+    setOffers(data);
   };
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/new">
-          <NewOffersComponent />
+          <NewOffersComponent offers={offers} setOffers={setOffers} />
         </Route>
         <Route exact path="/hot">
           <HotOffersComponent />

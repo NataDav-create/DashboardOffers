@@ -16,11 +16,14 @@ export const Title = styled.h1`
   margin-bottom: 30px;
 `;
 
-export const NewOffersComponent = () => (
-  <SectionCenter>
-    <Title>Here NewOfferComponent</Title>
-    <Link to="/" className="btn">
-      back home
-    </Link>
-  </SectionCenter>
-);
+export const NewOffersComponent = ({ offers, setOffers }) => {
+  console.log(offers);
+  return (
+    <SectionCenter>
+      <Title>Here NewOfferComponent</Title>
+      <Link to="/" className="btn">
+        back home
+      </Link>
+    </SectionCenter>
+  );
+};
