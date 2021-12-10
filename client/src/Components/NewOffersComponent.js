@@ -18,7 +18,6 @@ export const Title = styled.h1`
 `;
 
 export const NewOffersComponent = ({ offers }) => {
-  const columns = offers[0] && Object.keys(offers[0]);
   return (
     <SectionCenter>
       <table cellPadding={0} cellSpacing={0}>
@@ -30,7 +29,7 @@ export const NewOffersComponent = ({ offers }) => {
           {offers.map((row) => (
             <tr>
               <td>{row.offername}</td>
-              <td>{row.createdat}</td>
+              <td>{row.createdat.substring(0, 10)}</td>
             </tr>
           ))}
         </tbody>
