@@ -40,15 +40,15 @@ export default function Navbar() {
   return (
     <NavbarEl>
       <div className="title">
-        <h2>Dashboard</h2>
-        <span>Detailed information about your offers</span>
-      </div>
+        <h2> Dashboard </h2>{' '}
+        <span> Detailed information about your offers </span>{' '}
+      </div>{' '}
       <div className="container">
         <div className="search">
           <BiSearchAlt />
           <input type="text" placeholder="Search..." />
-        </div>
-      </div>
+        </div>{' '}
+      </div>{' '}
     </NavbarEl>
   );
 }

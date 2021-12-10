@@ -48,4 +48,28 @@ h1, h2, h3 {
 p {
   margin: 0;
   padding: 0;
-}`;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: none;
+  width: 250px;
+  height: 65px;
+  background-color: #299b01;
+  border-color: transparent;
+  color: white;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: #299b01;
+    border: 1px solid #299b01;
+  }
+}
+`;
