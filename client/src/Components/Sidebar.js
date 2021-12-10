@@ -68,19 +68,32 @@ export const ImgContainer = styled.div`
 
 export default function Sidebar() {
   const links = [
-    { text: 'New Offers', icon: ImNewTab, active: true },
-    { text: 'Hot Offers', icon: MdWhatshot },
-    { text: 'Expired Offers', icon: FcExpired },
+    {
+      text: 'New Offers',
+      icon: ImNewTab,
+      active: true,
+      url: '/new',
+    },
+    {
+      text: 'Hot Offers',
+      icon: MdWhatshot,
+      url: '/hot',
+    },
+    {
+      text: 'Expired Offers',
+      icon: FcExpired,
+      url: '/expired',
+    },
   ];
   return (
     <SidebarEl>
-      <Offers>Offers</Offers>
+      <Offers> Offers </Offers>{' '}
       <LinksEl>
-        <Links links={links} />
-      </LinksEl>
+        <Links links={links} />{' '}
+      </LinksEl>{' '}
       <ImgContainer>
         <img src={piggy} alt="piggy" />
-      </ImgContainer>
+      </ImgContainer>{' '}
     </SidebarEl>
   );
 }

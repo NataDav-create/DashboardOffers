@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Links({ links }) {
   return (
@@ -7,10 +8,9 @@ export default function Links({ links }) {
         console.log(link);
         return (
           <li className={link.active ? 'active' : ''}>
-            <a href="">
-              <link.icon />
-              {link.text}
-            </a>
+            <Link to={link.url}>
+              <link.icon /> {link.text}
+            </Link>
           </li>
         );
       })}
