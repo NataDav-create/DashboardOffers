@@ -67,7 +67,7 @@ export default function OffersInfo() {
               <div className="progress__bar">
                 <div className="title-cont">
                   <h5>{x.title}</h5>
-                  <h5>{x.value}</h5>
+                  <h5>{x.value} %</h5>
                 </div>
                 <progress value={x.value} max="100" />
               </div>
