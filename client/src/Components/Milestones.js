@@ -39,17 +39,17 @@ export default function Milestones() {
     {
       icon: ImNewTab,
       title: 'New Offers',
-      value: '1.274k',
+      value: '74k',
     },
     {
       icon: MdWhatshot,
       title: 'Hot Offers',
-      value: '1007k',
+      value: '100k',
     },
     {
       icon: FcExpired,
       title: 'Expired Offers',
-      value: '1.500k',
+      value: '150k',
     },
   ];
   return (
