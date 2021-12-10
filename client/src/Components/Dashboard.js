@@ -5,8 +5,6 @@ import OffersInfo from './OffersInfo';
 import styled from 'styled-components';
 
 export const DashboardEl = styled.div`
-  /* display: flex;
-  justify-content: space-between; */
   margin-left: 17rem;
   padding: 2rem;
   height: 100%;
@@ -32,11 +30,11 @@ export default function Dashboard() {
       <div className="grid">
         <div className="one">
           <Milestones />
-        </div>
+        </div>{' '}
         <div className="two">
           <OffersInfo />
-        </div>
-      </div>
+        </div>{' '}
+      </div>{' '}
     </DashboardEl>
   );
 }

@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 export const SectionCenter = styled.div`
   padding: 5rem 0;
-  width: 90vw;
-  margin: 0 auto;
+  /* padding-left: 8rem; */
+  width: calc(100% - 15rem);
+  margin-left: 17rem;
   max-width: 1170px;
 `;
 
@@ -16,11 +17,26 @@ export const Title = styled.h1`
   margin-bottom: 30px;
 `;
 
-export const NewOffersComponent = () => (
-  <SectionCenter>
-    <Title>Here NewOfferComponent</Title>
-    <Link to="/" className="btn">
-      back home
-    </Link>
-  </SectionCenter>
-);
+export const NewOffersComponent = ({ offers }) => {
+  return (
+    <SectionCenter>
+      <table cellPadding={0} cellSpacing={0}>
+        <thead>
+          <th>Offer</th>
+          <th>Created at</th>
+        </thead>
+        <tbody>
+          {offers.map((row) => (
+            <tr>
+              <td>{row.offername}</td>
+              <td>{row.createdat.substring(0, 10)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <Link to="/" className="btn btn-new">
+        back home
+      </Link>
+    </SectionCenter>
+  );
+};

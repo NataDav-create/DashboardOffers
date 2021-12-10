@@ -54,19 +54,19 @@ export default function Milestones() {
   ];
   return (
     <MilestonesEl>
+      {' '}
       {data.map((milestone) => {
         return (
           <div className="milestone">
             <div className="icon">
               <milestone.icon />
-            </div>
+            </div>{' '}
             <div className="details">
-              <h4>{milestone.title}</h4>
-              <h2>{milestone.value}</h2>
-            </div>
+              <h4> {milestone.title} </h4> <h2> {milestone.value} </h2>{' '}
+            </div>{' '}
           </div>
         );
-      })}
+      })}{' '}
     </MilestonesEl>
   );
 }
