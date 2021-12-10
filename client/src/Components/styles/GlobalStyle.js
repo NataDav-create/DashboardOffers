@@ -72,4 +72,7 @@ p {
     border: 1px solid #299b01;
   }
 }
+table{
+  color: black;
+}
 `;
