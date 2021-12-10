@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { GlobalStyle } from './Components/styles/GlobalStyle';
 import { NewOffersComponent } from './Components/NewOffersComponent';
@@ -8,7 +8,21 @@ import Sidebar from './Components/Sidebar';
 import Dashboard from './Components/Dashboard';
 import Home from './Components/Home';
 
+const url = 'https://61b20da6c8d4640017aaf162.mockapi.io/api/network/1/offers';
+
 function App() {
+  const [offers, setOffers] = useState([]);
+
+  const getOffers = async () => {
+    const response = await fetch(url);
+    const offers = await response.json();
+    console.log(offers);
+  };
+
+  useEffect(() => {
+    getOffers();
+  }, []);
+
   return (
     <Router>
       <GlobalStyle />
