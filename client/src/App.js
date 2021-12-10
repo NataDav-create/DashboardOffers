@@ -33,7 +33,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/new">
-          <NewOffersComponent offers={offers} setOffers={setOffers} />
+          <NewOffersComponent offers={offers} />
         </Route>
         <Route exact path="/hot">
           <HotOffersComponent />
