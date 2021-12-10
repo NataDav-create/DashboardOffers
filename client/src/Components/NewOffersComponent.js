@@ -20,6 +20,7 @@ export const Title = styled.h1`
 export const NewOffersComponent = ({ offers }) => {
   return (
     <SectionCenter>
+      <Title>New Offers</Title>
       <input className="date" type="date" />
       <table cellPadding={0} cellSpacing={0}>
         <thead>
