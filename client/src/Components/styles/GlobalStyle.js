@@ -1,6 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+  createGlobalStyle
+} from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle `
 html {
   box-sizing: border-box;
 }
@@ -101,6 +103,12 @@ table {
         border-right: 0;
       }
     }
+  }
+  .date {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 0;
   }
 
 `;

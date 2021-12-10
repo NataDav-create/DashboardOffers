@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -20,6 +20,7 @@ export const Title = styled.h1`
 export const NewOffersComponent = ({ offers }) => {
   return (
     <SectionCenter>
+      <input className="date" type="date" />
       <table cellPadding={0} cellSpacing={0}>
         <thead>
           <th>Offer</th>
